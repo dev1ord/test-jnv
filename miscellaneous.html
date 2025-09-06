@@ -357,13 +357,159 @@
             in Australia
           </p>
           <div class="cta-buttons">
-            <button class="btn btn-secondary">Apply Now</button>
-            <button class="btn btn-secondary">Post a Job</button>
-          </div>
+            <button class="btn btn-secondary btn-cta" id="jobSeekerBtn">Find Your Dream Job</button>
+            <button class="btn btn-primary btn-cta" id="postJobBtn">Post a Job</button>
         </div>
       </div>
     </section>
 
+  <!-- Job Seeker Modal -->
+    <div class="modal" id="jobSeekerModal">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h2>Find Your Dream Job</h2>
+          <button class="modal-close" id="closeJobSeekerModal" title="Close">
+            <i class="fas fa-times"></i>
+          </button>
+        </div>
+        <div class="modal-body">
+          <p>
+            Join thousands of professionals who have found their perfect career
+            through JobsNVisa
+          </p>
+          <form class="job-form" id="jobSeekerForm">
+            <div class="form-group">
+              <input type="text" id="seekerName" name="name" required />
+              <label for="seekerName">Full Name</label>
+            </div>
+            <div class="form-group">
+              <input type="tel" id="seekerPhone" name="phone" required />
+              <label for="seekerPhone">Contact Number</label>
+            </div>
+            <div class="form-group">
+              <input type="email" id="seekerEmail" name="email" required />
+              <label for="seekerEmail">Email Address</label>
+            </div>
+            <div class="form-group">
+              <select id="seekerIndustry" name="industry" required>
+                <option value="">Select Preferred Industry</option>
+                <option value="aged-care">Aged Care</option>
+                <option value="ndis">NDIS</option>
+                <option value="healthcare">Healthcare</option>
+                <option value="construction">Construction</option>
+                <option value="it-engineering">IT & Engineering</option>
+                <option value="residential-care">Residential Care</option>
+                <option value="retail">Retail</option>
+                <option value="child-care">Child Care</option>
+              </select>
+              <label for="seekerIndustry">Preferred Industry</label>
+            </div>
+            <div class="form-group file-upload">
+              <input
+                type="file"
+                id="seekerResume"
+                name="resume"
+                accept=".pdf,.doc,.docx"
+                required
+              />
+              <label for="seekerResume" class="file-label"
+                >Upload Resume (PDF, DOC, DOCX)
+                <i class="fas fa-cloud-upload-alt"><span></span></i>
+              </label>
+              <div class="file-info" id="resumeInfo"></div>
+            </div>
+            <br />
+            <button type="submit" class="btn btn-primary btn-submit">
+              <i class="fas fa-rocket"></i>
+              Start My Career Journey
+            </button>
+          </form>
+        </div>
+      </div>
+    </div>
+
+   <!-- Post Job Modal -->
+    <div class="modal" id="postJobModal">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h2>Post a Job</h2>
+          <button class="modal-close" id="closePostJobModal" title="Close">
+            <i class="fas fa-times"></i>
+          </button>
+        </div>
+        <div class="modal-body">
+          <p>
+            Find the perfect candidates for your organization through our
+            extensive network
+          </p>
+
+          <form class="job-form" id="postJobForm">
+            <div class="form-group">
+              <input type="text" id="companyName" name="company" required />
+              <label for="companyName">Company Name</label>
+            </div>
+            <div class="form-group">
+              <input type="text" id="jobTitle" name="title" required />
+              <label for="jobTitle">Job Title</label>
+            </div>
+            <div class="form-group">
+              <textarea
+                id="jobDescription"
+                name="description"
+                rows="4"
+                required
+              ></textarea>
+              <label for="jobDescription">Job Description</label>
+            </div>
+            <div class="form-row">
+              <div class="form-group">
+                <input type="tel" id="companyPhone" name="phone" required />
+                <label for="companyPhone">Contact Number</label>
+              </div>
+              <div class="form-group">
+                <input type="email" id="companyEmail" name="email" required />
+                <label for="companyEmail">Email Address</label>
+              </div>
+            </div>
+            <div class="form-group">
+              <select id="jobIndustry" name="industry" required>
+                <option value="">Select Industry</option>
+                <option value="aged-care">Aged Care</option>
+                <option value="ndis">NDIS</option>
+                <option value="healthcare">Healthcare</option>
+                <option value="construction">Construction</option>
+                <option value="it-engineering">IT & Engineering</option>
+                <option value="residential-care">Residential Care</option>
+                <option value="retail">Retail</option>
+                <option value="child-care">Child Care</option>
+              </select>
+              <label for="jobIndustry">Industry</label>
+            </div>
+            <button type="submit" class="btn btn-primary btn-submit">
+              <i class="fas fa-bullhorn"></i>
+              Post Job Opening
+            </button>
+          </form>
+        </div>
+      </div>
+    </div>
+    <!-- Success Modal -->
+    <div class="modal" id="successModal">
+      <div class="modal-content success-modal">
+        <div class="modal-body">
+          <div class="success-icon">
+            <i class="fas fa-check-circle"></i>
+          </div>
+          <h2>Success!</h2>
+          <p id="successMessage">
+            Your submission has been received successfully.
+          </p>
+          <button class="btn btn-primary" id="closeSuccessModal">
+            Continue
+          </button>
+        </div>
+      </div>
+    </div>
     <!-- Footer -->
     <footer class="footer">
       <div class="container">
@@ -393,19 +539,9 @@
                 ><i class="fab fa-instagram"></i
               ></a>
               <a href="https://www.x.com/thejobsnvisa" class="social-link"
-                ><svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="16"
-                  height="16"
-                  fill="currentColor"
-                  class="bi bi-twitter-x"
-                  viewBox="0 0 16 16"
-                >
-                  <path
-                    d="M12.6.75h2.454l-5.36 6.142L16 15.25h-4.937l-3.867-5.07-4.425 5.07H.316l5.733-6.57L0 .75h5.063l3.495 4.633L12.601.75Zm-.86 13.028h1.36L4.323 2.145H2.865z"
-                  />
-                </svg>
-              </a>
+                ><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-twitter-x" viewBox="0 0 16 16">
+  <path d="M12.6.75h2.454l-5.36 6.142L16 15.25h-4.937l-3.867-5.07-4.425 5.07H.316l5.733-6.57L0 .75h5.063l3.495 4.633L12.601.75Zm-.86 13.028h1.36L4.323 2.145H2.865z"/>
+</svg></a>
             </div>
           </div>
           <div class="footer-section">
@@ -448,5 +584,6 @@
 
     <script src="main.js"></script>
     <script src="darkmode.js"></script>
+    <script src="forms.js"></script>
   </body>
 </html>
