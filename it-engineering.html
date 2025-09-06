@@ -1,0 +1,453 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="canonical" href="@yield('canonical', url()->current())" />
+    <meta name="robots" content="index, follow" />
+    <meta name="author" content="Shreyash Srivastva" />
+    <meta name="publisher" content="JobsNVisa" />
+    <meta name="copyright" content="JobsNVisa" />
+    <title>IT & Engineering Jobs - JobsNVisa</title>
+    <link rel="stylesheet" href="main.css" />
+    <link rel="stylesheet" href="components.css" />
+    <link rel="stylesheet" href="pages.css" />
+    
+    <link
+      rel="icon"
+      type="image/png/svg"
+      href="favicon.svg"
+    />
+    <link
+      rel="shortcut icon"
+      type="image/png/svg"
+      href="favicon.svg"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+  </head>
+  <body>
+    <!-- Navigation -->
+    <nav class="navbar">
+      <div class="nav-container">
+        <div class="nav-logo">
+          <a href="index.html">
+            <img
+              src="dark.png"
+              alt="JobsNVisa Logo"
+              class="logo-image"
+            />
+          </a>
+        </div>
+        <ul class="nav-menu">
+          <li><a href="index.html" class="nav-link">Home</a></li>
+          <li><a href="index.html#about" class="nav-link">About</a></li>
+          <li>
+            <a href="index.html#industries" class="nav-link">Industries</a>
+          </li>
+          <li>
+            <a href="index.html#services" class="nav-link">Services</a>
+          </li>
+          <li><a href="index.html#contact" class="nav-link">Contact</a></li>
+        </ul>
+        <div class="nav-controls">
+          <button class="theme-toggle" id="themeToggle">
+            <i class="fas fa-moon"></i>
+          </button>
+          <div class="hamburger" id="hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Page Header -->
+    <section class="page-header">
+      <div class="container">
+        <div class="breadcrumb">
+          <a href="index.html">Home</a>
+          <span>/</span>
+          <span>IT & Engineering</span>
+        </div>
+        <h1>IT & Engineering Careers</h1>
+        <p>Innovation-driven roles in technology and engineering excellence</p>
+      </div>
+    </section>
+
+    <!-- Industry Overview -->
+    <section class="industry-overview">
+      <div class="container">
+        <div class="overview-content">
+          <div class="overview-text">
+            <h2>Driving Innovation & Technology</h2>
+            <p style="text-align: justify">
+              Australia's technology and engineering sectors are at the
+              forefront of global innovation, creating exceptional opportunities
+              for skilled professionals in software development, cybersecurity,
+              data science, and engineering disciplines. From fintech startups
+              in Sydney to mining technology in Perth, the demand for technical
+              expertise continues to grow.
+            </p>
+            <p style="text-align: justify">
+              Our IT and engineering partners range from innovative startups to
+              multinational corporations, all committed to technological
+              advancement and professional development. These roles offer
+              excellent career progression, competitive salaries, and the
+              opportunity to work on cutting-edge projects.
+            </p>
+
+            <div class="key-stats">
+              <div class="stat-item">
+                <div class="stat-number">284+</div>
+                <div class="stat-label">Available Positions</div>
+              </div>
+              <div class="stat-item">
+                <div class="stat-number">$60-110</div>
+                <div class="stat-label">Hourly Rate Range</div>
+              </div>
+              <div class="stat-item">
+                <div class="stat-number">94%</div>
+                <div class="stat-label">Job Satisfaction Rate</div>
+              </div>
+            </div>
+          </div>
+          <div class="overview-image">
+            <div class="image-placeholder">
+              <img
+                src="IT & Engineering.jpg"
+                alt="IT & Engineering Image"
+                class="image-placeholder"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Job Categories -->
+    <section class="job-categories">
+      <div class="container">
+        <div class="section-header">
+          <h2>Technology Specializations</h2>
+          <p>
+            Cutting-edge opportunities across IT and engineering disciplines
+          </p>
+        </div>
+        <div class="categories-grid">
+          <div class="category-card">
+            <div class="category-icon">
+              <i class="fas fa-code"></i>
+            </div>
+            <h3>Software Development</h3>
+            <p>
+              Full-stack developers, mobile app developers, and software
+              engineers building next-generation applications.
+            </p>
+            <ul class="category-features">
+              <li>$50-60 per hour</li>
+              <li>Remote work options</li>
+              <li>Latest technology stacks</li>
+              <li>Agile development environments</li>
+            </ul>
+            <button class="category-btn">Apply</button>
+          </div>
+
+          <div class="category-card">
+            <div class="category-icon">
+              <i class="fas fa-shield-alt"></i>
+            </div>
+            <h3>Cybersecurity</h3>
+            <p>
+              Security analysts, penetration testers, and cybersecurity
+              specialists protecting digital infrastructure.
+            </p>
+            <ul class="category-features">
+              <li>$70-95 per hour</li>
+              <li>High-demand specialty</li>
+              <li>Certification support</li>
+              <li>Critical infrastructure projects</li>
+            </ul>
+            <button class="category-btn">Apply</button>
+          </div>
+
+          <div class="category-card">
+            <div class="category-icon">
+              <i class="fas fa-tasks"></i>
+            </div>
+            <h3>IT Project Manager</h3>
+            <p>
+              Experienced project managers leading software, infrastructure, and
+              engineering projects.
+            <ul class="category-features">
+              <li>$80-110 per hour</li>
+              <li>Leadership roles</li> 
+              <li>Agile and Scrum methodologies</li>
+              <li>Cross-functional team management</li>
+            </ul>
+            <button class="category-btn">Apply</button>
+          </div>
+
+          <div class="category-card">
+            <div class="category-icon">
+              <i class="fas fa-chart-line"></i>
+            </div>
+            <h3>Data & Analytics</h3>
+            <p>
+              Data scientists, business analysts, and AI specialists turning
+              data into business insights.
+            </p>
+            <ul class="category-features">
+              <li>$45-70 per hour</li>
+              <li>Machine learning projects</li>
+              <li>Business impact focus</li>
+              <li>Continuous learning culture</li>
+            </ul>
+            <button class="category-btn">Apply</button>
+          </div>
+
+          <div class="category-card">
+            <div class="category-icon">
+              <i class="fas fa-network-wired"></i>
+            </div>
+            <h3>Network & System Admin</h3>
+            <p>
+              Network engineers, system administrators, and IT support specialists
+              managing IT infrastructure.
+            </p>
+            <ul class="category-features">
+              <li>$30-45 per hour</li>
+              <li>Infrastructure management</li>
+              <li>Cloud integration</li>
+              <li>24/7 support roles</li>
+            </ul>
+            <button class="category-btn">Apply</button>
+        </div>
+
+        <div class="category-card">
+            <div class="category-icon">
+              <i class="fas fa-vial"></i>
+            </div>
+            <h3>QA Engineer</h3>
+              <P>
+              Focusing on improving the software development process and making it efficient and effective.
+            </p>
+            <ul class="category-features">
+              <li>$35-40 per hour</li>
+              <li>Automation testing</li>
+              <li>Agile teams</li>
+              <li>Quality assurance processes</li>
+            </ul>
+            <button class="category-btn">Apply</button>
+          </div>
+
+      </div>
+    </section>
+
+    <!-- Technology Trends -->
+    <section class="tech-trends">
+      <div class="container">
+        <div class="section-header">
+          <h2>Emerging Technologies</h2>
+          <p>Jobs N Visa helps you stay ahead with new tech opportunities</p>
+        </div>
+        <div class="trends-grid">
+          <div class="trend-item">
+            <div class="trend-icon">
+              <i class="fas fa-robot"></i>
+            </div>
+            <h3>Artificial Intelligence</h3>
+            <p>
+              Machine learning, natural language processing, and AI automation
+              projects.
+            </p>
+          </div>
+
+          <div class="trend-item">
+            <div class="trend-icon">
+              <i class="fas fa-cloud"></i>
+            </div>
+            <h3>Cloud Computing Engineering</h3>
+            <p>
+              AWS, Azure, and Google Cloud infrastructure and migration
+              projects.
+            </p>
+          </div>
+
+          <div class="trend-item">
+            <div class="trend-icon">
+              <i class="fas fa-mobile-alt"></i>
+            </div>
+            <h3>Mobile Development</h3>
+            <p>
+              iOS, Android, and cross-platform mobile application development.
+            </p>
+          </div>
+
+          <div class="trend-item">
+            <div class="trend-icon">
+              <i class="fas fa-network-wired"></i>
+            </div>
+            <h3>DevOps & Infrastructure</h3>
+            <p>
+              Continuous integration, deployment automation, and infrastructure
+              as code.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Requirements -->
+    <section class="requirements">
+      <div class="container">
+        <div class="section-header">
+          <h2>Technical Requirements</h2>
+          <p>
+            Essential skills and qualifications for IT and engineering roles
+          </p>
+        </div>
+        <div class="requirements-content">
+          <div class="requirements-grid">
+            <div class="requirement-item">
+              <div class="requirement-icon">
+                <i class="fas fa-graduation-cap"></i>
+              </div>
+              <h3>Qualifications</h3>
+              <ul>
+                <li>Relevant degree in IT or related technical fields</li>
+                <li>Professional certifications</li>
+                <li>Continuous learning and upskilling</li>
+                <li>Projects and achievements</li>
+              </ul>
+            </div>
+
+            <div class="requirement-item">
+              <div class="requirement-icon">
+                <i class="fas fa-laptop-code"></i>
+              </div>
+              <h3>Technical Skills</h3>
+              <ul>
+                <li>Programming languages (Python, Java, JavaScript, C++)</li>
+                <li>Database management and design</li>
+                <li>Version control systems (Git)</li>
+                <li>Agile development methodologies</li>
+              </ul>
+            </div>
+
+            <div class="requirement-item">
+              <div class="requirement-icon">
+                <i class="fas fa-users"></i>
+              </div>
+              <h3>Professional Skills</h3>
+              <ul>
+                <li>Problem-solving and analytical thinking</li>
+                <li>Communication and teamwork</li>
+                <li>Project management experience</li>
+                <li>Adaptability to new technologies</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section">
+      <div class="container">
+        <div class="cta-content">
+          <h2>Build the Future of Tech</h2>
+          <p>
+            Advance Tomorrow’s Tech with Opportunities and Trusted Talent!
+          </p>
+          <div class="cta-buttons">
+            <button class="btn btn-secondary">Apply Now</button>
+            <button class="btn btn-secondary">Post a Job</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="container">
+        <div class="footer-content">
+          <div class="footer-section">
+            <div class="footer-logo">
+              <h3>JobsNVisa</h3>
+              <p>Your gateway to career excellence in Australia</p>
+            </div>
+            <div class="social-links">
+              <a
+                href="https://www.facebook.com/profile.php?id=61579092253323&sk=about"
+                class="social-link"
+                title="Facebook"
+                ><i class="fab fa-facebook"></i
+              ></a>
+              <a
+                href="https://au.linkedin.com/company/the-jobs-n-visa-pty-ltd?trk=public_post_feed-actor-image"
+                class="social-link"
+                title="LinkedIn"
+                ><i class="fab fa-linkedin"></i
+              ></a>
+              <a href="https://www.youtube.com/@JobsNVisa" class="social-link"
+                ><i class="fab fa-youtube"></i
+              ></a>
+              <a href="https://www.instagram.com/jobsnvisa/" class="social-link"
+                ><i class="fab fa-instagram"></i
+              ></a>
+              <a href="https://www.x.com/thejobsnvisa" class="social-link"
+                ><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-twitter-x" viewBox="0 0 16 16">
+  <path d="M12.6.75h2.454l-5.36 6.142L16 15.25h-4.937l-3.867-5.07-4.425 5.07H.316l5.733-6.57L0 .75h5.063l3.495 4.633L12.601.75Zm-.86 13.028h1.36L4.323 2.145H2.865z"/>
+</svg></a>
+            </div>
+          </div>
+          <div class="footer-section">
+            <h4>Support</h4>
+            <ul class="footer-links">
+              <li><a href="help-center.html">Help Center</a></li>
+              <li><a href="privacy-policy.html">Privacy Policy</a></li>
+              <li>
+                <a href="terms-of-service.html">Terms of Service</a>
+              </li>
+              <li><a href="cookie-policy.html">Cookie Policy</a></li>
+            </ul>
+          </div>
+          <div class="footer-section">
+            <h4>Contact Info</h4>
+            <div class="contact-info">
+              <div class="contact-item">
+                <i class="fas fa-phone"></i>
+                <a href="tel:+61387643335">+61 3 8764 3335</a>
+              </div>
+              <div class="contact-item">
+                <i class="fas fa-envelope"></i>
+                <a href="mailto:info@jobsnvisa.com.au">info@jobsnvisa.com.au</a>
+              </div>
+              <div class="contact-item">
+                <i class="fas fa-map-marker-alt"></i>
+                <span>Sydney, Melbourne, Brisbane</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <div class="footer-bottom-content">
+            <p>&copy; 2025 JobsNVisa. All rights reserved.</p>
+            <p>Licensed Migration Agent | Registered Employment Services</p>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <script src="main.js"></script>
+    <script src="darkmode.js"></script>
+  </body>
+</html>
