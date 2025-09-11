@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><link rel="canonical" href="@yield('canonical', url()->current())">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="robots" content="index, follow" />
     <meta name="author" content="Shreyash Srivastva" />
     <meta name="publisher" content="JobsNVisa"/>
@@ -10,9 +10,7 @@
     <meta
       name="description" content="JobsNVisa - Your Gateway to Career Excellence in Australia. Connect with top employers across Australia's fastest-growing industries. We bridge the gap between talent and opportunity with personalized visa and employment solutions." >
     <title>JobsNVisa - Your Gateway to Career Excellence</title>
-    <meta name="keywords" content="JobsNVisa, Job Placement, Visa Assistance, Career Opportunities, Australia Jobs, Skilled Migration, Employment Services, Aged Care Jobs, NDIS Jobs, Healthcare Jobs, IT Jobs, Construction Jobs, Child Care Jobs, Residential Care Jobs, Retail Jobs" />   
-    <link rel="canonical" href="@yield('canonical', url()->current())">
-    <meta name="robots" content="index, follow" />
+    <meta name="keywords" content="JobsNVisa, Job Placement, Visa Assistance, Career Opportunities, Australia Jobs, Skilled Migration, Employment Services, Aged Care Jobs, NDIS Jobs, Healthcare Jobs, IT Jobs, Construction Jobs, Child Care Jobs, Residential Care Jobs, Retail Jobs" />    <meta name="robots" content="index, follow" />
     <meta name="author" content="Shreyash Srivastva" />
     <meta name="publisher" content="JobsNVisa"/>
     <meta name="copyright" content="JobsNVisa"/>
@@ -78,25 +76,23 @@
       <div class="container">
         <div class="hero-content">
           <h1 class="hero-title">
-            Your Gateway to
-            <span class="highlight">Career Excellence</span>
+              Thriving Employers<br>
+            <span class="highlight">& Soaring Careers </span>
           </h1>
           <p class="hero-description" style="text-align:justify;">
-            Connect with top employers across Australia's fastest-growing
-            industries. We bridge the gap between talent and opportunity with
-            personalized visa and employment solutions.
+            Whether hiring top talent or finding new opportunities, we simplify the process with recruitment and compliance support for employers and career guidance for candidates.
           </p>          
           <div class="hero-buttons">
             <button class="btn btn-secondary btn-cta" id="jobSeekerBtn">
               <i class="fas fa-user"></i>
-              Find Your Dream Job
+              Apply
             </button>
             <button class="btn btn-primary btn-cta" id="postJobBtn">
               <i class="fas fa-briefcase"></i>
-              Post a Job
+              Start Recruiting Today!
             </button>
           </div>
-        </div>
+        </div>        
         <div class="achievements-grid"><div class="hero-image">
           <div class="hero-card">
             <div class="">              
@@ -142,16 +138,14 @@
           <div class="about-text">
             <h3>Empowering Requirement, Delivering Excellence</h3>
             <p style="text-align:justify;">
-              At Jobs N Visa, we understand that finding the right career
-              opportunity is more than just landing a job, it's about building
+              At Jobs N Visa, we understand that finding the right opportunities in our careers
+               is more than just landing a job, it's about building
               a future. With over a decade of experience in the Australian job
               market, we specialize in connecting skilled professionals with
               employers across critical industries.
             </p>
             <p style="text-align:justify;">
-              Our comprehensive approach combines expert professional guidance, visa
-              assistance, and personalised support to ensure your transition to
-              Australian employment is seamless and successful.
+             Backed by a holistic approach and expert guidance in visa processes and tailored support, we make your journey to employment in Australia seamless, empowering you to succeed with confidence.
             </p>
             <div class="about-features">
               <div class="feature">
@@ -392,7 +386,7 @@
                 <li><i class="fas fa-check"></i> Flexible work arrangements</li>
                 <!--<li><i class="fas fa-check"></i> Career progression paths</li>-->
               </ul>
-              <button class="service-btn">Learn More</button>
+              <a href="blog1.html"><button class="service-btn">Learn More</button></a>
             </div>
           </div>          
           <div class="service-card">
@@ -453,12 +447,12 @@
               <span>Serving all of Australia</span>
             </div>
           </div>
-          <div class="contact-form-section">
+      <div class="contact-form-section">
             <div class="contact-form-container">
               <div class="contact-icon">
                 <i class="fa-solid fa-message"></i>
               </div>
-          <h3 style="font-size: 25px;">Send us a Message</h3>
+            <h3 style="font-size: 25px;">Send us a Message</h3>
               <form class="contact-form" id="contactForm">
                 <div class="form-row">
                   <div class="form-group">
@@ -502,7 +496,7 @@
                   <i class="fas fa-paper-plane"></i>
                   Send Message
                 </button>
-              </form>
+              </form> 
             </div>
           </div>
         </div>
@@ -523,7 +517,7 @@
             Join thousands of professionals who have found their perfect career
             through JobsNVisa
           </p>
-          <form class="job-form" id="jobSeekerForm">
+          <form class="job-form" id="jobSeekerForm" name='submit-by-employee'>
             <div class="form-group">
               <input type="text" id="seekerName" name="name" required />
               <label for="seekerName">Full Name</label>
@@ -554,7 +548,6 @@
               <input
                 type="file"
                 id="seekerResume"
-                name="resume"
                 accept=".pdf,.doc,.docx"
                 required
               />
@@ -565,11 +558,21 @@
               <div class="file-info" id="resumeInfo"></div>
             </div>
             <br />
-            <button type="submit" class="btn btn-primary btn-submit">
+            <button type="submit" class="btn btn-primary btn-submit" name="submit">
               <i class="fas fa-rocket"></i>
               Start My Career Journey
             </button>
           </form>
+          <script>
+            const scriptURL1 = 'https://script.google.com/macros/s/AKfycbwo5qJddr0RbA67KAmMYs54rkPLqrxYWzyWEH6d-wX7ehPn6rFBRjpKcQOtn-apbYcw/exec'
+            const form1 = document.forms['submit-by-employee']
+            form.addEventListener('submit', e => {
+              e.preventDefault()
+              fetch(scriptURL1, { method: 'POST', body: new FormData(form1)})
+                .then(response => console.log('Success!', response))
+                .catch(error => console.error('Error!', error.message))
+            })
+          </script>
         </div>
       </div>
     </div>
@@ -588,8 +591,7 @@
             Find the perfect candidates for your organization through our
             extensive network
           </p>
-
-          <form class="job-form" id="postJobForm" target="_blank" action="https://formsubmit.co/shreyash@growmore.one" method="POST">
+          <form class="job-form" id="postJobForm" name="submit-to-google-sheet">
             <div class="form-group">
               <input type="text" id="companyName" name="company" required />
               <label for="companyName">Company Name</label>
@@ -599,12 +601,7 @@
               <label for="jobTitle">Job Title</label>
             </div>
             <div class="form-group">
-              <textarea
-                id="jobDescription"
-                name="description"
-                rows="4"
-                required
-              ></textarea>
+              <textarea id="jobDescription" name="description" rows="4" required></textarea>
               <label for="jobDescription">Job Description</label>
             </div>
             <div class="form-row">
@@ -631,14 +628,25 @@
               </select>
               <label for="jobIndustry">Industry</label>
             </div>
-            <button type="submit" class="btn btn-primary btn-submit">
+            <button type="submit" class="btn btn-primary btn-submit" name="submit">
               <i class="fas fa-bullhorn"></i>
               Post Job Opening
             </button>
           </form>
+          <script>
+            const scriptURL = 'https://script.google.com/macros/s/AKfycbzIoULg75Dl5WncZmtBzx3D-h2bYgvI9K2kJZ12E_Z8sfQGvli2YgI9f-Il-t27qF6p/exec'
+            const form = document.forms['submit-to-google-sheet']
+            form.addEventListener('submit', e => {
+              e.preventDefault()
+              fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+                .then(response => console.log('Success!', response))
+                .catch(error => console.error('Error!', error.message))
+            })
+          </script>
         </div>
       </div>
     </div>
+    
     <!-- Success Modal -->
     <div class="modal" id="successModal">
       <div class="modal-content success-modal">
@@ -753,7 +761,7 @@
     </footer>
     <script src="main.js"></script>
     <script src="darkmode.js"></script>
-    <script src="forms.js"></script>
+    <script src="forms.js"></script>    
   </body>
 </html>
 
